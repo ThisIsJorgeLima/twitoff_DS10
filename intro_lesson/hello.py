@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 # Make the route
      @app.route("/")
- # Now define a function
+    # Now define a function
     def hello():
             return render_template ('home.html')
 
