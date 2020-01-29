@@ -19,6 +19,8 @@ scikit-learn = "*"
 python = "*"
 hon-dotenv = "*"
 python-decouple = "*"
+psycopg2 = "*"
+python-dotenv = "*"
 
 [requires]
 python_version = "3.7"

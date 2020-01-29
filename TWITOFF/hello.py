@@ -1,11 +1,18 @@
-  from flask import Flask
-  app = Flask(__name__)
+  """Minimal flask app"""
+from flask import Flask, rend_template
 
-  @app.route(' / ')
-def index():
-        return 'Index Page'
+# Make the application
+app = Flask(__name__)
 
-    @app.route(' /hello')
+# Make the route
+     @app.route("/")
+ # Now define a function
     def hello():
-        return 'Hello, World'
-    return app
+            return render_template ('home.html')
+
+    # Make a second route
+        @app.route("/about")
+
+        # Now make the function that goes with about
+        def  preds():
+            return render_template('about.html')
