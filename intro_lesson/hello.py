@@ -5,10 +5,10 @@ from flask import Flask, rend_template
 app = Flask(__name__)
 
 # Make the route
-     @app.route("/")
+    @app.route("/")
     # Now define a function
     def hello():
-            return render_template ('home.html')
+            return render_template('home.html')
 
     # Make a second route
         @app.route("/about")
