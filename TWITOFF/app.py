@@ -1,21 +1,23 @@
-'''Code for our app'''
+"""Main application for twitoff"""
+# to run in flask server: from decouple import config
 from decouple import config
+from dotenv import load_dotenv
 from flask import Flask, render_template, request
 from .models import DB, User
+from .predict import predict_user
 from .twitter import add_or_update_user
-# make our app factory
+
+load_dotenv()
 
 
 def create_app():
     """create and configures an instance of a flask app"""
     app = Flask(__name__)
 
-    # add config for database
     app.config['SQLALCHEMY_DATABASE_URI'] = config('DATABASE_URL')
-    # app.conf['ENV'] = config('ENV')
-    # stop tracking modification on sqlalchemy config
+    # app.config['ENV'] = config('ENV') #should change this later to production
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-    # have the database know about the app'
+
     DB.init_app(app)
 
     @app.route('/')
@@ -23,13 +25,13 @@ def create_app():
         users = User.query.all()
         return render_template('base.html', title='Home', users=users)
 
-    @app.route('/user', methods=['POST', 'GET'])
+    @app.route('/user', methods=['POST'])
     @app.route('/user/<name>', methods=['GET'])
-    def user(name=None, messaage=' '):
+    def user(name=None, message=''):
         name = name or request.values['user_name']
         # import pdb; pdb.set_trace()
         try:
-            if requtest.method == 'POST':
+            if request.method == 'POST':
                 add_or_update_user(name)
                 message = "User {} successfully added!".format(name)
             tweets = User.query.filter(User.name == name).one().tweets
@@ -39,9 +41,24 @@ def create_app():
         return render_template('user.html', title=name, tweets=tweets,
                                message=message)
 
+    @app.route('/compare', methods=['POST'])
+    def compare(message=''):
+        user1, user2 = sorted([request.values['user1'],
+                               request.values['user2']])
+        if user1 == user2:
+            message = 'Cannot compare a user to themselves!'
+        else:
+            prediction = predict_user(user1, user2,
+                                      request.values['tweet_text'])
+            message = '"{}" is more likely to be said by {} than {}'.format(
+                request.values['tweet_text'], user1 if prediction else user2,
+                user2 if prediction else user1)
+        return render_template('prediction.html', title='Prediction',
+                               message=message)
+
     @app.route('/reset')
     def reset():
         DB.drop_all()
         DB.create_all()
-        return render_template('base.html', title='Reset', users=[])
+        return render_template('base.html', title='DB Reset', users=[])
     return app
