@@ -1,5 +1,4 @@
 """Main application for twitoff"""
-# to run in flask server: from decouple import config
 from decouple import config
 from dotenv import load_dotenv
 from flask import Flask, render_template, request
@@ -50,6 +49,8 @@ def create_app():
         else:
             prediction = predict_user(user1, user2,
                                       request.values['tweet_text'])
+        # prediction=predict_user(user1, user2,
+            # request.values['tweet_text'], CACHE)
             message = '"{}" is more likely to be said by {} than {}'.format(
                 request.values['tweet_text'], user1 if prediction else user2,
                 user2 if prediction else user1)
