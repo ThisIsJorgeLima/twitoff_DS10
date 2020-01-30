@@ -1,50 +1,61 @@
+</head>
 <!DOCTYPE html>
 <html>
-  <head>
-    <title> Twitoff APP - {{ title }} </title>
-    <link rel="stylesheet" href="https://unpkg.com/picnic">
-  </head>
-
- <style>
- {
-
-}
-
-p.ex2 {
-
-  margin: 35px;
-  padding: 25px;
-
-}
-
-</style>
+<head>
+<title> Twitoff APP - {{ title }} </title>
+<!-- CSS, keywords, metadata goes here-->
+<link rel="stylesheet" href="https://unpkg.com/picnic">
 </head>
 <body>
+<!--<h1 style="font-family:Helvetica Neue;color:black;">Twitoff APP</h1></p>->
+<!-here is your custom header with twitter bird image-->
+</head>
+    <nav>
+        <a href="/" class="brand"><span>TwitOff!</span></a>
 
-<p class="ex2""page-header">
-      <h1 style="font-family:Helvetica Neue;color:black;background-color:white;">Twitoff APP</h1></p>
-        <img draggable="false"src="https://i.ibb.co/vk3sGC8/twitter.png" alt="" style="width: 50px; height: 50px; position:absolute; left:5px; top: 92px;" />
-    {% block content %}
-    <form action="/user" method="post">
-      <input type="text" name="user_name" placeholder="User to add">
-      <input type="submit" value="Add User">
-    </form>
+    <img draggable="false"src="https://i.ibb.co/vk3sGC8/twitter.png" alt="" style="width: 25px; height: 25px; position:absolute; left:85px; top: 0px;" />
 
-<!-- here is where we add new stuff for comparing users -->
-    <form action="/compare" method="post">
-      <select name="user1">
+<!-- responsive -->
+     <input id="bmenub" type="checkbox" class="show">
+     <label for="bmenub" class="burger pseudo button">Menu</label>
+
+     <div class="menu">
+         <a href="/update" class="button warning">Update Tweets</a>
+         <a href="/reset" class="button error">Reset Tweets </a>
+     </div>
+</nav>
+
+<article class="flex two" style="padding: 3em 1em;">
+      {% block content %}
+      <div>
+        <h1>{{ title }}</h1>
+        <p>Select two users to compare:</p>
+        <form action="/compare" method="post">
+          <select name="user1">
+            {% for user in users %}
+            <option value="{{ user.name }}">{{ user.name }}</option>
+            {% endfor %}
+          </select>
+          <select name="user2">
+            {% for user in users %}
+            <option value="{{ user.name }}">{{ user.name }}</option>
+            {% endfor %}
+          </select>
+          <input type="text" name="tweet_text" placeholder="Tweet text to predict">
+          <input type="submit" value="Compare Users">
+        </form>
+      </div>
+      <div>
+        <h2>Twitter Users</h2>
         {% for user in users %}
-        <option value="{{ user.name }}">{{ user.name }}</option>
+        <a href="/user/{{ user.name }}"><span class="stack">{{ user.name }}</span></a>
         {% endfor %}
-      </select>
-      <select name="user2">
-        {% for user in users %}
-        <option value="{{ user.name }}">{{ user.name }}</option>
-        {% endfor %}
-      </select>
-      <input type="text" name="tweet_text" placeholder="Tweet text to predict">
-      <input type="submit" value="Compare Users">
-    </form>
-    {% endblock %}
+        <form action="/user" method="post">
+          <input type="text" name="user_name" placeholder="User to add">
+          <input type="submit" value="Add User">
+        </form>
+      </div>
+      {% endblock %}
+    </article>
   </body>
 </html>

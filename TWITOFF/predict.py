@@ -2,6 +2,7 @@
 import pickle
 import numpy as np
 from sklearn.linear_model import LogisticRegression
+#from sklearn.neighbors import KneighborsClassifier
 from .models import User
 from .twitter import BASILICA
 
@@ -20,6 +21,8 @@ def predict_user(user1_name, user2_name, tweet_text, cache=None):
         labels = np.concatenate([np.ones(len(user1.tweets)),
                                  np.zeros(len(user2.tweets))])
         log_reg = LogisticRegression().fit(embeddings, labels)
+        # knnc = KNeighborsClassifier(weights='distance', metric='cosine').fit(
+        # embeddings, labels)
         cache and cache.set(user_set, pickle.dumps(log_reg))
     tweet_embedding = BASILICA.embed_sentence(tweet_text, model='twitter')
     return log_reg.predict(np.array(tweet_embedding).reshape(1, -1))

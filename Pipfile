@@ -21,6 +21,10 @@ hon-dotenv = "*"
 python-decouple = "*"
 psycopg2 = "*"
 python-dotenv = "*"
+pickle = "*"
+pickle-mixin = "*"
+cache = "*"
+sklearn-neighbors = "*"
 
 [requires]
 python_version = "3.7"
