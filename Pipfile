@@ -6,26 +6,6 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
-flask = "*"
-jinj = "*"
-a2 = "*"
-basilica = "*"
-tweepy = "*"
-redis = "*"
-pyscopg2 = "*"
-flask-sqlalchemy = "*"
-gunicorn = "*"
-scikit-learn = "*"
-python = "*"
-hon-dotenv = "*"
-python-decouple = "*"
-psycopg2 = "*"
-python-dotenv = "*"
-pickle = "*"
-pickle-mixin = "*"
-cache = "*"
-sklearn-neighbors = "*"
-pyscopg2-binary = "*"
 
 [requires]
 python_version = "3.7"
