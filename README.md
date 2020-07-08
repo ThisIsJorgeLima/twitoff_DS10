@@ -15,15 +15,15 @@ The app displays prediction results to the user.
 
 <!--ts-->
    * [Setup](#setup)
-   * [Installing package dependencies:](#installing-package-dependencies:)
-   * [The Basilica API:](#the-Basilica-API:)
-   * [The Twitter API and Tweepy Package:](#the-twitter-api-and-tweepy-package:)
-   * [Saving tweets and users in the database.](#saving-tweets-and-users-in-the-database.)
+   * [Installing package dependencies](#installing-package-dependencies)
+   * [The Basilica API](#the-Basilica-API)
+   * [The Twitter API and Tweepy Package](#the-twitter-api-and-tweepy-package)
+   * [Saving tweets and users in the database](#saving-tweets-and-users-in-the-database)
    * [Twitter Service:](#twitter-service:)
 <!--te-->
 
 ## Setup
-=========
+--------
 Setup and activate a virtual environment:
 
 ```sh
