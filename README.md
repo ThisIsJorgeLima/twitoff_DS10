@@ -14,16 +14,15 @@ App displays prediction results to the user.
 =================
 
 <!--ts-->
-   * [Setup](#Setup)**<br>
-   * [Installing package dependencies:](#Installing package dependencies:)**<br>
-   * [The Basilica API:](#The Basilica API)**<br>
-   * [The Twitter API and Tweepy Package:](#The Twitter API and Tweepy Package)**<br>
-   * [Saving tweets and users in the database.](#Saving tweets and users in the database)**<br>
+   * [Table of contents](#table-of-contents)
+   * [Installing package dependencies:](#Installing-package-dependencies:)
+   * [The Basilica API:](#The-Basilica-API:)
+   * [The Twitter API and Tweepy Package:](#The-Twitter-API-and-Tweepy-Package:)
+   * [Saving tweets and users in the database.](#Saving-tweets-and-users-in-the-database.)
+   * [Twitter Service:](#Twitter-Service:)
 
 
 <!--te-->
-
-# Part I 
 
 ## Setup
 Setup and activate a virtual environment:
@@ -82,7 +81,6 @@ TWITTER_ACCESS_TOKEN_SECRET="_______________________"
 > IMPORTANT: remember to add a `.env` entry into the ".gitignore" file, to prevent secret creds from being tracked in version control!!
 Setup the database:
 
-## Part III
 
 The Basilica API:
 
@@ -126,8 +124,6 @@ if __name__ == "__main__":
     print(list(embeddings)) # [[0.8556405305862427, ...], ...]
 
 ```
-
-## Part IV
 
 The Twitter API and Tweepy Package:
 
