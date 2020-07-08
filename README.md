@@ -11,7 +11,7 @@ App makes a request to Basilica API for the natural language processing embeddin
 App displays prediction results to the user.
 
 # Table of contents
-=================
+====================
 
 <!--ts-->
    * [Table of contents](#table-of-contents)
@@ -20,11 +20,10 @@ App displays prediction results to the user.
    * [The Twitter API and Tweepy Package:](#The-Twitter-API-and-Tweepy-Package:)
    * [Saving tweets and users in the database.](#Saving-tweets-and-users-in-the-database.)
    * [Twitter Service:](#Twitter-Service:)
-
-
 <!--te-->
 
 ## Setup
+=========
 Setup and activate a virtual environment:
 
 ```sh
@@ -41,11 +40,11 @@ pipenv --python 3.7
 ```
 
 Installing package dependencies:
+================================
 
 ```sh
 pipenv install Flask Flask-SQLAlchemy Flask-Migrate
 ```
-# Part II
 
 > sign up for Basilica and Twitter API accounts, respectively:
 >  + https://developer.twitter.com/en/docs
@@ -83,6 +82,7 @@ Setup the database:
 
 
 The Basilica API:
+=================
 
   + https://www.basilica.ai/quickstart/python/
   + https://www.basilica.ai/api-keys/
@@ -126,6 +126,7 @@ if __name__ == "__main__":
 ```
 
 The Twitter API and Tweepy Package:
+==================================
 
   + https://developer.twitter.com/en/docs
   + https://github.com/tweepy/tweepy
@@ -134,6 +135,7 @@ The Twitter API and Tweepy Package:
   + http://docs.tweepy.org/en/latest/api.html#API.user_timeline
 
 Twitter Service:
+=================
 
 ```py
 # web_app/services/twitter_service.py
@@ -177,9 +179,10 @@ if __name__ == "__main__":
     #    print(tweet.text)
     #    print("-------------")
 ```
-## Part V
 
 Saving tweets and users in the database.
+=========================================
+
 
 Twitter Routes (Iteration 1, returning the results as JSON):
 
