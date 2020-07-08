@@ -14,7 +14,7 @@ The app displays prediction results to the user.
 ====================
 
 <!--ts-->
-   * [Table of contents](#table-of-contents)
+   * [Setup](#setup)
    * [Installing package dependencies:](#installing-package-dependencies:)
    * [The Basilica API:](#the-Basilica-API:)
    * [The Twitter API and Tweepy Package:](#the-twitter-api-and-tweepy-package:)
