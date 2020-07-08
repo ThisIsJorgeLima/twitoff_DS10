@@ -19,6 +19,20 @@ Setup and activate a virtual environment:
 pipenv install
 pipenv shell
 ```
+
+Create a new repo on GitHub, then get it setup locally:
+
+```sh
+git clone YOUR_REMOTE_ADDRESS
+cd your-repo-name
+pipenv --python 3.7
+```
+
+Installing package dependencies:
+
+```sh
+pipenv install Flask Flask-SQLAlchemy Flask-Migrate
+```
 # Part II
 
 > sign up for Basilica and Twitter API accounts, respectively:
@@ -462,16 +476,6 @@ Flask-SQLAlchemy:
 Flask-Migrate:
   + https://flask-migrate.readthedocs.io/en/latest/
   
-Create a new repo on GitHub, then get it setup locally:
-
-```sh
-git clone YOUR_REMOTE_ADDRESS
-cd your-repo-name
-pipenv --python 3.7
-```
-
-Installing package dependencies:
-
-```sh
-pipenv install Flask Flask-SQLAlchemy Flask-Migrate
-```
+- **[MIT license](http://opensource.org/licenses/mit-license.php)**
+- Copyright 2019-2020 © <a href="http://thisisjorgelima.com" target="_blank">Jorge A. Lima</a>.
+ 
