@@ -23,7 +23,8 @@ The app displays prediction results to the user.
 <!--te-->
 
 ## Setup
---------
+=========
+
 Setup and activate a virtual environment:
 
 ```sh
