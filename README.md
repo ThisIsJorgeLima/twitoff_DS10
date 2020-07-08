@@ -16,7 +16,7 @@ Table of contents
 <!--ts-->
    * [Table of contents](#table-of-contents)
    * [Setup](#Setup)
-   * [Installing package dependencies:](#Installing package dependencies)
+   * [Installing package dependencies:](#Installing package dependencies:)
    * [The Basilica API:](#The Basilica API)
    * [The Twitter API and Tweepy Package:](#The Twitter API and Tweepy Package)
    * [Saving tweets and users in the database.](#Saving tweets and users in the database)
