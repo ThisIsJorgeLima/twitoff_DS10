@@ -10,15 +10,15 @@ App uses the tweet embeddings from both users to train a binary classifier model
 App makes a request to Basilica API for the natural language processing embeddings for the example tweet text, and passes those to the model as an input value in order to make predictions.
 App displays prediction results to the user.
 
-###Table of contents
+# Table of contents
 =================
 
 <!--ts-->
-   ** [Setup](#Setup)**<br>
-   ** [Installing package dependencies:](#Installing package dependencies:)**<br>
-   ** [The Basilica API:](#The Basilica API)**<br>
-   ** [The Twitter API and Tweepy Package:](#The Twitter API and Tweepy Package)**<br>
-   ** [Saving tweets and users in the database.](#Saving tweets and users in the database)**<br>
+   * [Setup](#Setup)**<br>
+   * [Installing package dependencies:](#Installing package dependencies:)**<br>
+   * [The Basilica API:](#The Basilica API)**<br>
+   * [The Twitter API and Tweepy Package:](#The Twitter API and Tweepy Package)**<br>
+   * [Saving tweets and users in the database.](#Saving tweets and users in the database)**<br>
 
 
 <!--te-->
