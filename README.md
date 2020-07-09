@@ -16,8 +16,29 @@ The app displays prediction results to the user.
    * [Installing package dependencies](#installing-package-dependencies)
    * [The Basilica API](#the-Basilica-API)
    * [The Twitter API and Tweepy Package](#the-twitter-api-and-tweepy-package)
-   * [Saving tweets and users in the database](#saving-tweets-and-users-in-the-database)
-   * [Twitter Service](#twitter-service)
+      * [Twitter Service](#twitter-service)
+      * [Saving tweets and users in the database](#saving-tweets-and-users-in-the-database)
+      * [Twitter Routes](#twitter-routes)
+   * [Usage](#usage)
+   * [Flask Basics](#flask-basics)
+      * [Testing a Flask App](#testing-a-flask-app)
+      * [Defining a basic Flask App](#defining-a-basic-flask-app)
+      * [Running a Flask App](#running-a-flask-app)
+      * [Init file in "web_app" directory: (#init-file-in-web-app-directory
+      * [Home routes](#home-routes)
+      * [Running the Flask App, after new "web_app" organizational structure in place:](#running-the-flask-app-after-new-web_app-organizational-structure-in-place)
+   * [HTML](#html)
+   * [Flask View Templates](#flask-view-templates)
+   * [Twitter Bootstrap](#twitter-bootstrap)
+   * [Flask-SQLAlchemy](#flask-sql-alchemy)
+   * [Flask-Migrate](#flask-migrate)
+   * [MIT license](#mit-license)
+
+
+
+ 
+
+
 <!--te-->
 
 ## Setup
@@ -451,11 +472,6 @@ set FLASK_APP=web_app # one-time thing, to set the env var
 flask run
 ```
 
-
-## Part VI
-
-> FYI: As a basic requirement for this part of class, we'll just return some plain HTML pages. Only if you have time and interest should you also concern yourself with the shared layouts and the Twitter Bootstrap styling. We might have some time to review them in-class during class 4, otherwise all the info and starter code you need is below. 
-
 HTML:
   + https://www.w3schools.com/html/html_basic.asp
   + https://www.w3schools.com/html/html_forms.asp
@@ -473,9 +489,6 @@ Twitter Bootstrap:
   + https://getbootstrap.com/docs/4.0/components/navbar/#color-schemes
   + https://stackoverflow.com/questions/19733447/bootstrap-navbar-with-left-center-or-right-aligned-items
   
-  
-## Part VII
-
 Flask-SQLAlchemy:
   + https://github.com/pallets/flask-sqlalchemy/
   + https://flask-sqlalchemy.palletsprojects.com/en/2.x/
