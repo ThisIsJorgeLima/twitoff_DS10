@@ -1,12 +1,9 @@
 # twitoff
 
-Data Flows
-The "Twitoff App" data flows are like:
-
 The user provides an example of tweet text and selects two Twitter users to compare, which is more likely to say the example tweet text.
 App requests user and tweet information from the Twitter API, as necessary, to gather data about each user, and stores it in the database.
 For each tweet, the app requests Basilica API to get corresponding natural language processing embeddings and stores them in the database.
-App uses the tweet embeddings from both users to train a binary classifier model.
+This app uses the tweet embeddings from both users to train a binary classifier model.
 The app makes a request to Basilica API for the natural language processing embeddings for the example tweet text. It passes those to the model as an input value to make predictions.
 The app displays prediction results to the user.
 
