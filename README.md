@@ -11,8 +11,6 @@ The app makes a request to Basilica API for the natural language processing embe
 The app displays prediction results to the user.
 
 # Table of contents
-====================
-
 <!--ts-->
    * [Setup](#setup)
    * [Installing package dependencies](#installing-package-dependencies)
@@ -23,7 +21,6 @@ The app displays prediction results to the user.
 <!--te-->
 
 ## Setup
-=========
 
 Setup and activate a virtual environment:
 
