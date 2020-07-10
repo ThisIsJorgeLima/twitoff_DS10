@@ -21,7 +21,7 @@ The app displays prediction results to the user.
       * [Testing a Flask App](#testing-a-flask-app)
       * [Defining a basic Flask App](#defining-a-basic-flask-app)
       * [Running a Flask App](#running-a-flask-app)
-      * [Init file in "web_app" directory](#init-file-in-web-app-directory
+      * [Init file in "web_app" directory](#init-file-in-web-app-directory)
       * [Home routes](#home-routes)
       * [Running the Flask App, after new "web_app" organizational structure in place:](#running-the-flask-app-after-new-web_app-organizational-structure-in-place)
    * [HTML](#html)
