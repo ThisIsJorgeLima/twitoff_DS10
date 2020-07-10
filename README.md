@@ -1,4 +1,4 @@
-# twitoff
+# Twitoff
 
 The user provides an example of tweet text and selects two Twitter users to compare, which is more likely to say the example tweet text.
 App requests user and tweet information from the Twitter API, as necessary, to gather data about each user, and stores it in the database.
